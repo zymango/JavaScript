@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>注册事件</button>
+    <button>方法监听注册事件</button>
+    <button>IE9</button>
+
+    <script>
+        //1.传统方式注册事件
+        var btns = document.querySelectorAll('button');
+        btns[0].onclick = function() {
+            alert('hi');
+        }
+        btns[0].onclick = function() {
+                alert('hello');
+            }
+            //2.事件侦听注册事件  addEventListener里面的事件类型是字符串  必定加引号  而且不带on
+        btns[1].addEventListener('click', function() {
+            alert(22);
+        })
+        btns[1].addEventListener('click', function() {
+                alert(33);
+            })
+            //3.attachEvent  ie9以前版本
+        btns[2].attachEvent('onclick', function() {
+            alert(11);
+        })
+    </script>
+</body>
+
+</html>

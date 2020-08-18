@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var age = 100;
+        var obj = {
+            age: 20,
+            say: () => {
+                alert(this.age);
+            }
+        };
+        obj.say(); //100
+        //解析：对象不能产生作用域，say()方法实际是被定义在全局作用域下，say方法中的this指向的是window
+    </script>
+</body>
+
+</html>

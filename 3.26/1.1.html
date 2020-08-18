@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		img{
+			width: 200px;
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+	<button id="dyz">第一张</button>
+	<button id="dez">第二张</button><br>
+	<img src='beauty_20200313143156.jpg'  title="这是第一张图片">
+	<script>
+		//修改元素属性
+		//1.获取元素
+		var dyz = document.getElementById('dyz');
+		var dez = document.getElementById('dez');
+		var img = document.querySelector('img');
+		//2.注册事件  处理程序
+		dez.onclick = function(){
+			img.src = "beauty_20200313143213.jpg";
+			img.title = "这是第二张图片";
+		}
+		dyz.onclick = function(){
+			img.src = "beauty_20200313143156.jpg";
+			img.title = "这是第一张图片";
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+        //有一个对象 来判断是否有该属性  对象['属性名']
+        var o = {
+            age: 18
+        }
+        if (o['age']) {
+            console.log('里面有该属性');
+        } else {
+            console.log('里面没有该属性');
+        }
+        //判断一个字符'abcofoxyozzopp'中出现次数最多的字符，并统计出现次数
+        //核心算法：利用charAt()遍历这个字符串
+        //把每个字符串都存储给对象，如果对象没有该属性，就为1，如果存在了就+1
+        //遍历对象，得到最大值和该字符
+        var str = 'abcofoxyozzopp';
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i); //chars字符串的每一个字符
+            if (o[chars]) { // o[chars]得到的是属性
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        //2.遍历对象
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            //k得到的是属性名
+            //o[k] 得到的是属性值
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('最多的字符串是' + ch);
+        //6.5字符串的操作方法
+        // concat(str1, str2, str3……)  concat()方法用于连接两个或多个字符串，拼接字符串，等效于+，+更常用
+        // substr(start, length) 从start位置开始(索引号)，length取的个数，重点记住这个
+        // slice(start, end) 从start位置开始，截取到end位置，end取不到(他们俩都是索引号)
+        // substring(start, end) 从start位置开始，截取到end位置，end取不到  基本和slice相同 但不接受负值
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

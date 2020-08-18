@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //   var obj = {
+  //   [Symbol('name')]: 'xiaoming',
+  //   [Symbol('age')]: 18
+  // }
+  // Reflect.ownKeys(obj).forEach(function(key){
+  //   console.log(key, obj[key]);
+    
+  // });
+
+  const obj = {};
+  let a = Symbol('a');
+  let b = Symbol('b');
+
+  obj[a] = 'hello';
+  obj[b] = 'world';
+
+  Object.getOwnPropertySymbols(obj).forEach((key,value)=> {
+    console.log(key, value);
+    
+  });
+
+  </script>
+</body>
+</html>

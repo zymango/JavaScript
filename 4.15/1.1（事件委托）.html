@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>弹框</li>
+        <li>弹框</li>
+        <li>弹框</li>
+        <li>弹框</li>
+        <li>弹框</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        var lis = document.querySelectorAll('li');
+        ul.addEventListener('click', function(e) {
+            // alert('弹框');
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].style.backgroundColor = '';
+                e.target.style.backgroundColor = 'pink';
+            }
+
+        })
+    </script>
+</body>
+
+</html>

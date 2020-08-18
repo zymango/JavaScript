@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		//利用构造函数创建对象 
+		//我们需要创建四大天王的对象  相同的属性：  名子 年龄 性别 相同的方法：唱歌
+		//构造函数语法结构
+		// function 构造函数名(){
+		// 	this.属性 = 值；
+		// 	this.方法 = function(){}
+		// }
+		// new 构造函数（）；
+		function Star(uname, age, sex){
+			this.name = uname;
+			this.age = age;
+			this.sex = sex;
+			this.sing = function(song){
+				console.log(song);
+			}
+		}
+		var ldh = new Star('刘德华',18,'男')  //调用函数返回的是一个对象
+		console.log(typeof ldh);
+		console.log(ldh.name);
+		console.log(ldh.sex);
+		ldh.sing('冰雨');
+		console.log(ldh);
+		//1.构造函数名子首字母要大写
+		//2.我们构造函数不需要return  就可以返回结果
+		//3.我们调用构造函数必须使用new关键字
+		//4.我们只要 new Star（）调用函数就创建一个对象
+		//5.我们的属性和方法前面必须添加 this
+		var zuy = new Star('张学友',19,'男');
+		console.log(zuy.name);
+		console.log(zuy.age);
+		console.log(zuy);
+		//对象  是一个具体的事物
+		//构造函数  泛指的某一大类  类似于Java中的类（class）
+		//我们利用构造函数创建对象的过程我们也称为对象的实例化
+	</script>
+</head>
+<body>
+
+</body>
+</html>

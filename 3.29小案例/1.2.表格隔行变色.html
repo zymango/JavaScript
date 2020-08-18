@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+	 	*{
+	 		margin: 0;
+	 		padding: 0;
+	 		
+	 	}
+		table{
+			/*border: 1px solid black;*/
+			width: 800px;
+			margin: 100px auto;
+			text-align: center;
+			border-collapse: collapse;
+			font-size: 14px;
+		}
+		thead{
+			height: 30px;
+			background-color: skyblue;
+		}
+		tbody tr{
+			height: 30px;
+		}
+		tbody td{
+			border-bottom: 1px solid #d7d7d7;
+			font-size: 12px;
+			color: blue;
+		}
+		.bg{
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td>代码</td>
+				<td>名称</td>
+				<td>最新公布净值</td>
+				<td>累计净值</td>
+				<td>前单位净值</td>
+				<td>净值增长率</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>003526</td>
+				<td>农行金穗3个月定期开放债卷</td>
+				<td>1.075</td>
+				<td>1.079</td>
+				<td>1.074</td>
+				<td>+0.047%</td>
+			</tr>
+			<tr>
+				<td>003526</td>
+				<td>农行金穗3个月定期开放债卷</td>
+				<td>1.075</td>
+				<td>1.079</td>
+				<td>1.074</td>
+				<td>+0.047%</td>
+			</tr>
+			<tr>
+				<td>003526</td>
+				<td>农行金穗3个月定期开放债卷</td>
+				<td>1.075</td>
+				<td>1.079</td>
+				<td>1.074</td>
+				<td>+0.047%</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		var trs = document.querySelector('tbody').querySelectorAll('tr');
+		for(var i = 0; i < trs.length; i++){
+			trs[i].onmouseover = function(){
+				console.log(1);
+				this.className = 'bg';
+			}
+			trs[i].onmouseout = function(){
+				this.className = '';
+			}
+		}
+	</script>
+</body>
+</html>

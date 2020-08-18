@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery.mini.js"></script>
+</head>
+
+<body>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <script>
+        $(function() {
+            //1.隐式迭代  给所有按钮都绑定了点击事件
+            $("button").click(function() {
+                //2.当前元素变化颜色
+                $(this).css("background", "pink");
+                //3.其余兄弟元素清除样式
+                $(this).siblings("button").css("background", "");
+            });
+        })
+    </script>
+</body>
+
+</html>

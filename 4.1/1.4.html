@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <ul>
+        <li>123</li>
+    </ul>
+    <script>
+        //1.创建节点
+        var li = document.createElement('li');
+        //2.添加节点  node.appendChild(Child)  node是父级  child 是子集  后面追加元素 类似于数组的push
+        var ul = document.querySelector('ul');
+        ul.appendChild(li);
+        //3.添加节点  node.insertBefore(child, 指定元素)
+        var lili = document.createElement('li');
+        ul.insertBefore(lili, ul.children[0]);
+        //4.我们先要页面添加一个新的元素：1.创建元素 2.添加元素
+    </script>
+</body>
+
+</html>

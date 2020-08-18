@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //利用递归函数求n的阶乘
+        function fn(n) {
+            if (n === 1) {
+                return 1;
+            }
+            return n * fn(n - 1);
+        }
+        fn(3);
+        console.log(fn(3));
+        console.log(fn(4));
+        //详细思路  假如用户输入的是3
+        //return 3 * fn(2)
+        //return 3 * (2 * 1);
+    </script>
+</body>
+
+</html>

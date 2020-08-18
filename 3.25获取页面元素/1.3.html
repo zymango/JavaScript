@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div class="box">盒子</div>
+	<div class="box">盒子</div>
+	<div id="nav">
+		<ul>
+			<li>首页</li>
+			<li>产品</li>
+		</ul>
+	</div>
+	<script>
+		//1.getElementsByClassName 根据类名获得某些元素的1集合
+		var boxs = document.getElementsByClassName('box');
+		console.log(boxs);
+		//2.querySelector  返回指定选择器的第一个元素对象  切记里面的选择器要加符号 .box   #nav 
+		var firstBox = document.querySelector('.box');
+		console.log(firstBox);
+		var nav = document.querySelector('#nav');
+		console.log(nav);
+		var li = document.querySelector('li');
+		console.log(li);
+		//3.querySelectorAll() 返回指定选择器的所有元素对象集合
+		var allBox = document.querySelectorAll('.box');
+		console.log(allBox);
+		var lis = document.querySelectorAll('li');
+		console.log(lis);
+	</script>
+
+
+</body>
+</html>

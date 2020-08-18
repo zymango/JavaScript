@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		//1.Math对象随机数方法  random() 返回一个随机的小数  0 =< x < 1
+		//2.这个方法不跟参数
+		console.log(Math.random());
+		//3.我们想要得到两个数之间的随机整数并且包含这两个整数  Math.floor(Math.random()*(max - min + 1)) + min;
+		function getRandom(min, max){
+			return Math.floor(Math.random()*(max - min + 1)) + min;
+		}
+		console.log(getRandom(1, 10));
+		//4.随机点名
+		var arr = ['张三', '张三丰', '张三疯子'];
+		console.log(arr[getRandom(0, arr.length - 1)]);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

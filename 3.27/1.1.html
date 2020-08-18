@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script>
+		//1.获取元素
+		var div = document.querySelector('div');
+		//2.注册事件  处理程序
+		div.onclick = function(){
+			//div.style里面的属性  采取驼峰命名法
+			this.style.backgroundColor = 'purple';
+			this.style.width = '250px';
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		function getRandom(min, max){
+			return Math.floor(Math.random()*(max - min + 1)) + min;
+		}
+		var random = getRandom(1, 100);
+
+		while(true){//死循环
+			var num = prompt('你来猜？输入1~100之间的一个数字');
+				if(num > random){
+					alert('你猜大了');
+				}else if(num < random){
+					alert('你猜小了');
+				}else {
+					alert('你好帅哦，猜对了');
+					break; //退出整个循环结束程序
+				}
+		   }
+	</script>
+</head>
+<body>
+
+</body>
+</html>

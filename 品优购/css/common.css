@@ -1,0 +1,196 @@
+/*公共样式*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+@font-face {
+			/*1. 这个字体名称要注意 icomoon*/
+		  font-family: 'icomoon';
+		  /*2. 一定要注意路径的问题*/
+		  src:  url('../fonts/icomoon.eot?7kkyc2');
+		  src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+		    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+		    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+		    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+		  font-weight: normal;
+		  font-style: normal;
+	}  
+.fr .icomoon{
+	font-family: 'icomoon';
+	font-size: 16px;
+	line-height: 26px;
+}
+.w{
+	width: 1200px;
+	margin: 0 auto;
+}
+.style-red{
+	color: #c81623;
+}
+/*顶部快捷导航*/
+.shortcut{
+	height: 31px;
+	background-color: #f1f1f1;
+	line-height: 31px;
+
+}
+.shortcut li{
+	float: left;
+}
+.spacer{
+	width: 1px;
+	height: 12px;
+	background-color: #666;
+	margin: 9px 12px 0;
+}
+/*header区域*/
+.header{
+	position: relative;
+	height: 105px;
+/*	background-color: pink;*/
+
+}
+.logo{
+	position: absolute;
+	top: 25px;
+	left: 0;
+	width: 172px;
+	height: 56px;
+	/*background-color: purple;*/
+}
+.logo a{
+	display: block;
+	/*overflow: hidden;*/
+	width: 172px;
+	height: 56px;
+	background:url(../img/logo.png) no-repeat;
+	/*text-indent: -999px;*/
+	font-size: 0;
+}
+.search{
+	position: absolute;
+	top: 25px;
+	left: 348px;
+	/*border: 1px solid red;*/
+}
+.text{
+	float: left;
+	width: 445px;
+	height: 32px;
+	border: 2px solid #b1191a;
+	padding-left: 10px;
+	color: #ccc;
+
+}
+.btn{
+	float: left;
+	width: 82px;
+	height: 36px;
+	background-color: #b1191a;
+	border: 0;
+	font-size: 16px;
+	color: #fff;
+}
+.hotwords{
+	position: absolute;
+	top: 65px;
+	left: 348px;
+}
+.hotwords a{
+	margin: 0 12px;
+}
+.shopcar{
+	position: absolute;
+	top: 25px;
+	right: 64px;
+	width: 138px;
+	height: 34px;
+	border: 1px solid #dfdfdf;
+	background-color: #f7f7f7;
+	line-height: 34px;
+	text-align: center;
+}
+.car{
+	font-family: 'icomoon';
+	color: #da5555;
+	font-size: 16px;
+	margin-right: 5px;
+}
+.arrow{
+	font-family: 'icomoon';
+	margin-left: 5px;
+}
+.count{
+	position: absolute;
+	height: 14px;
+	top: -5px;
+	/*左侧对齐  文字才能往右走*/
+	left: 100px;
+	background-color: #e60012;
+	line-height: 14px;
+	padding: 3px;
+	color: #fff;
+	border-radius: 7px 7px 7px 0px;
+}
+.nav{
+	height: 45px;
+	border-bottom: 2px solid #b1191a;
+}
+.dropdown{
+	width: 209px;
+	height: 45px;
+	background-color:pink; 
+}
+.dropdown .dt{
+	height: 100%;
+	background-color: #b1191a;
+	font-size: 16px;
+	color: #fff;
+	line-height: 45px;
+	text-align: center;
+}
+.dropdown .dd{
+	height: 465px;
+	background-color: #c81623;
+	margin-top: 2px;
+}
+.menu_item{
+	height: 31px;
+	line-height: 31px;
+	margin-left: 1px;
+	/*color: #fff;*/
+	padding:0 10px;  /*这个是为了右面图标右浮动时，离右边有一定的边距*/
+}
+.menu_item:hover{
+	background-color: #fff;
+	
+}
+/*鼠标经过li,里面a变颜色*/
+.menu_item:hover a{
+	color:#c81623;
+}
+.menu_item a{
+	color: #fff;
+}
+.menu_item i{
+	float: right;
+	font-family: 'icomoon';
+	font-size: 18px;
+	color: #fff;
+}
+.navitems{
+	margin-left: 10px;
+}
+/*字数不一样  不能给宽度*/
+.navitems li{
+	float: left;
+}
+.navitems li a{
+	display: block;
+	height: 45px;
+	padding: 0 25px;
+	line-height: 45px;
+	font-size: 16px;
+}

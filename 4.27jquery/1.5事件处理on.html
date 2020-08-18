@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery.mini.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        
+        .current {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ol>
+
+    </ol>
+    <script>
+        $(function() {
+            //1.单个事件注册
+            // $("div").click(function() {
+            //     $(this).css("background", "purple");
+            // });
+            // $("div").mouseenter(function() {
+            //     $(this).css("background", "skyblue");
+            // });
+
+            //2.事件处理on
+            //(1)on可以绑定1个或者多个事件处理程序
+            // $("div").on({
+            //     mouseenter: function() {
+            //         $(this).css("background", "purple");
+            //     },
+            //     click: function() {
+            //         $(this).css("background", "skyblue");
+            //     },
+            //     mouseleave: function() {
+            //         $(this).css("background", "blue");
+            //     }
+            // });
+            $("div").on("mouseenter mouseleave", function() {
+                // alert(11);
+                $(this).toggleClass("current");
+            });
+            //(2)on可以实现事件委托（委派）
+            $("ul").on("click", "li", function() {
+                alert(11);
+            });
+            //click 是绑定在ul身上的，但是触发的对象是ul里面的小li
+            //(3)on可以给未来动态创建的元素绑定事件
+            $("ol").on("click", "li", function() {
+                alert(11);
+            })
+            var li = $("<li>我是后来创建的</li>")
+            $("ol").append(li);
+        })
+    </script>
+</body>
+
+</html>

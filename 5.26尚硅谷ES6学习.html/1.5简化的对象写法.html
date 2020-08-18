@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 简化的对象写法
+    *省略同名的属性值
+    *省略方法的的function
+    *例如：
+    let x = 1;
+    let y = 2;
+    let point = {
+        x,
+        y,
+        setX(x){this.x = x}
+    };
+
+-->
+    <script>
+        let username = 'tom';
+        let age = 18;
+        let obj = {
+            // username: username,
+            username, //同名的属性可以不写
+            //age: age
+            age,
+            // getName: function() {
+            //     return this.username;
+            // }
+            getName() { //可以省略函数的function
+                return this.username;
+            }
+        }
+        console.log(obj);
+        console.log(obj.getName());
+    </script>
+</body>
+
+</html>

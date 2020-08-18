@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //对象解构允许我们使用变量名子匹配对象的属性  匹配成功  将对象属性的值赋值给变量
+        let person = {
+            name: 'lisi',
+            age: 18,
+            sex: '男'
+        };
+        // let {
+        //     name,
+        //     age,
+        //     sex
+        // } = person;
+        // console.log(name);
+        // console.log(age);
+        // console.log(sex);
+        let {
+            name: myname
+        } = person;
+        console.log(myname);
+    </script>
+</body>
+
+</html>

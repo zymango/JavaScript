@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.大括号  ：量词符，里面表示重复的次数
+        // 2.中括号：字符集合，匹配方括号中的任意字符
+        // 3.小括号：表示优先级
+        // var reg = /^[abc]$/;
+        //a可以  b可以  c可以  a || b || c
+        var reg = /^abc{3}$/; //它只是让c重复三次  abccc
+        console.log(reg.test('abc')); //false
+        console.log(reg.test('abcabcabc')); //false
+        console.log(reg.test('abccc')); //true
+
+        var reg = /^(abc){3}$/; //它是让abc重复三次
+        console.log(reg.test('abc')); //false
+        console.log(reg.test('abcabcabc')); //true
+        console.log(reg.test('abccc')); //false
+    </script>
+</body>
+
+</html>

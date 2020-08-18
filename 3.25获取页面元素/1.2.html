@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<ul>
+		<li>知否知否，应是等你好久！1</li>
+		<li>知否知否，应是等你好久！2</li>
+		<li>知否知否，应是等你好久！3</li>
+		<li>知否知否，应是等你好久！4</li>
+		<li>知否知否，应是等你好久！5</li>
+	</ul>
+	<ul id = "nav">
+		<li>生僻字</li>
+		<li>生僻字</li>
+		<li>生僻字</li>
+		<li>生僻字</li>
+		<li>生僻字</li>
+	</ul>
+	<script>
+		//1.返回的是获取过来元素对象的集合  以伪数组形式存储
+		var lis = document.getElementsByTagName("li");
+		console.log(lis);
+		console.log(lis[0]);
+		//2.我们想要依次打印里面的元素对象我们可以采取遍历的方式
+		for(var i = 0; i <lis.length; i++){
+			console.log(lis[i]);
+		}
+		//3.element.getElementsByTagName() 可以得到这个元素里面的某些
+		var nav = document.getElementById('nav');
+		var navLis = nav.getElementsByTagName('li');
+		console.log(navLis);
+	</script>
+</body>
+</html>

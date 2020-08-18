@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery.mini.js"></script>
+</head>
+
+<body>
+    <video src="mov.mp4" muted></video>
+    <script>
+        //1.DOM对象转换成jQuery对象
+        //(1)直接获取
+        $('video');
+        //(2)已经原生获取过来  
+        var myvideo = document.querySelector('video');
+        // $(myvideo);
+        //2.jQuery对象转换成DOM对象
+        // myvideo.play();
+        // $('video')[0].play();
+        $('video').get(0).play();
+    </script>
+</body>
+
+</html>

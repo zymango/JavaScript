@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		function isRunYear(year){
+			var flag = false;
+			if(year % 4 == 0 && year % 400 != 0 || year % 400 == 0){
+				flag = true;
+			}
+			return flag;
+		}
+		console.log(isRunYear(2000));
+		console.log(isRunYear(1999));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery.mini.js"></script>
+    <style>
+        div {
+            width: 150px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+    <script>
+        $(function() {
+            $("button").eq(0).click(function() {
+                $("div").show(1000, function() {
+                    alert(1);
+                });
+            })
+            $("button").eq(1).click(function() {
+                $("div").hide(1000, function() {
+                    alert(1);
+                });
+            })
+            $("button").eq(2).click(function() {
+                    $("div").toggle(1000);
+                })
+                //一般情况下，不加参数，直接显示隐藏就可以了
+        })
+    </script>
+</body>
+
+</html>

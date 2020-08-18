@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery.mini.js"></script>
+</head>
+
+<body>
+    <div class="yeye">
+        <div class="father">
+            <div class="son">儿子</div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <p>今天星期六</p>
+        <div>
+            <p>今天星期天</p>
+        </div>
+    </div>
+    <script>
+        //注意一下都是方法  要带括号
+        $(function() {
+            //1.父  parent()  返回最近一级的父级元素
+            console.log($(".son").parent());
+
+            //2.子
+            //(1)最近的子元素 子代选择器  ul>li
+            $(".nav").children("p").css("color", "red");
+            //(2)可以选里面所有的孩子 所有的子代元素 ul li
+            $(".nav").find("p").css("color", "skyblue");
+            //3.兄
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		var a = 1;
+		function fn1(){
+			var a = 2;
+			var b = '22';
+			fn2();
+			function fn2(){
+				var a = 3;
+				fn3();
+				function fn3(){
+					var a = 4;
+					console.log(a);  // 4
+					console.log(b);  //字符型  22
+				}
+			}
+		}
+		fn1();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

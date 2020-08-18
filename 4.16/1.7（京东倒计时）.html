@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 500px;
+        height: 500px;
+        margin: 100px auto;
+    }
+    
+    span {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: cyan;
+        color: floralwhite;
+        font-size: 16px;
+        text-align: center;
+        line-height: 50px;
+    }
+</style>
+
+<body>
+    <div>
+        <span class="hour">1</span>小时
+        <span class="minute">2</span>分钟
+        <span class="second">3</span>秒
+    </div>
+    <script>
+        //1.获取元素
+        var hour = document.querySelector('.hour');
+        var minute = document.querySelector('.minute');
+        var second = document.querySelector('.second');
+        var inputTime = +new Date('2020-4-17 00:00:00'); //返回的是用户输入时间总的毫秒数
+        countDown(); //我们先调用一次  防止页面刷新出现空白
+        //2.开启定时器
+        setInterval(countDown, 1000)
+
+        function countDown() {
+            var nowTime = +new Date(); //返回的是当前时间总的毫秒数
+            var times = (inputTime - nowTime) / 1000; //time是剩余时间总的毫秒数
+            var d = parseInt(times / 60 / 60 / 24);
+            d = d < 10 ? '0' + d : d;
+            var h = parseInt(times / 60 / 60 % 24);
+            h = h < 10 ? '0' + h : h;
+            hour.innerHTML = h;
+            var m = parseInt(times / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            minute.innerHTML = m;
+            var s = parseInt(times % 60);
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>

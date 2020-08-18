@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 三点运算符
+    *用途
+    1.rest（可变）参数
+        *用来取代arguments,但比arguments灵活，只能是最后部分形参参数
+        function fun(...values){
+            console.arguments;
+            arguments.forEach(function(item, index){
+                console.log(item, index);
+            });
+            console.log(values);
+            values.forEach(function(item, index){
+                console.log(item, index);
+            })
+        }
+        fun(1, 2, 3);
+    2.扩展运算符
+    let arr1 = [1, 3, 5];
+    let srr2 = [2, ...arr1, 6];
+    arr2.push(...arr1);
+    
+    -->
+    <script>
+        function foo(a, ...value) {
+            console.log(arguments);
+            // arguments.callee();
+            // arguments.forEach(function(item, index) {
+            //     console.log(item, index);
+
+            // })
+            console.log(value);
+            value.forEach(function(item, index) {
+                console.log(item, index);
+
+            })
+
+        }
+        foo(1, 2, 30, 50);
+        let arr = [1, 6];
+        let arr1 = [2, 3, 4, 5];
+        arr = [1, ...arr1, 6];
+        console.log(arr);
+        console.log(...arr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		div:nth-child(1){
+			/*传统盒子模型*/
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			padding: 10px;
+			border: 10px solid red;
+		}
+		div:nth-child(2){
+			/*有个这句话，就让盒子变成css3盒子模型*/
+			/*padding和border不会再撑大盒子*/
+			box-sizing: border-box;
+			width:200px;
+			height: 200px;
+			background-color: purple;
+			padding: 10px; 
+			border: 10px solid red;
+			/*传统盒模型*/
+			/*box-sizing: content-box;*/
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+</body>
+</html>

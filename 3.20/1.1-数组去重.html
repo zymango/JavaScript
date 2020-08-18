@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		//封装一个去重的数组  unique
+		function unique(arr){
+			var newArry = [];
+			for(var i = 0; i < arr.length; i++){
+				if(newArry.indexOf(arr[i]) === -1){
+					newArry.push(arr[i]);
+				}
+			}
+			return newArry;
+		}
+		// var demo = unique(['c', 'a', 'z', 'a', 'x', 'c', 'b']);
+		var demo = unique(['red', 'blue', 'red']);
+		console.log(demo)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

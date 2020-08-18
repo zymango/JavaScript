@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        //扩展运算符可以将数组拆分成以逗号分隔的参数系列
+        let ary = ['a', 'b', 'c'];
+        console.log(...ary);
+        //扩展运算符应用于数组合并
+        // let ary1 = [1, 2, 3];
+        // let ary2 = [4, 5, 6];
+        // let ary3 = [...ary1, ...ary2];
+        // console.log(ary3);
+        //合并数组的第二种方法
+        // let ary1 = [1, 2, 3];
+        // let ary2 = [4, 5, 6];
+        // ary1.push(...ary2);
+        // console.log(ary1);
+        //利用扩展运算符将伪数组转换成真正的数组
+        var oDiv = document.getElementsByTagName('div');
+        console.log(oDiv);
+
+        var arr = [...oDiv];
+        arr.push('a');
+        console.log(arr);
+
+        console.log(...arr);
+    </script>
+</body>
+
+</html>

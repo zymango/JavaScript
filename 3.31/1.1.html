@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div getTime = "20" data-index = "2" data-list-name = "andy"></div>
+	<script>
+		var div = document.querySelector('div');
+		console.log(div.getAttribute("getTime"));
+		div.setAttribute('data-time', 20);
+		console.log(div.getAttribute('data-index'));
+		console.log(div.getAttribute('data-list-name'));
+		//h5新增  他只能获取data- 开头的
+		//dataset是一个集合，里面存放了所有以data开头的自定义属性
+		console.log(div.dataset);
+		console.log(div.dataset.index);
+		//如果自定义属性里面有多个-连接的单词，我们获取的时候采取  驼峰命名法
+		console.log(div.dataset.listName);
+		
+	</script>
+</body>
+</html>
